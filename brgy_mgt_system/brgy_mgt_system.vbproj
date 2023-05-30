@@ -1,0 +1,649 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3EDFC455-D438-4AC2-B27B-6A6E78879233}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>brgy_mgt_system.My.MyApplication</StartupObject>
+    <RootNamespace>brgy_mgt_system</RootNamespace>
+    <AssemblyName>brgy_mgt_system</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>brgy_mgt_system.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>brgy_mgt_system.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b" />
+    <Reference Include="Bunifu.UI.WinForms.1.5.3">
+      <HintPath>..\..\..\..\..\BunifuCrack-main\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>..\..\..\..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox">
+      <HintPath>..\..\..\..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>..\..\..\..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker">
+      <HintPath>..\..\..\..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
+      <HintPath>..\..\..\..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
+      <HintPath>..\..\..\..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPages">
+      <HintPath>..\..\..\..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPanel">
+      <HintPath>..\..\..\..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar">
+      <HintPath>..\..\..\..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShadowPanel">
+      <HintPath>..\..\..\..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuShadowPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSnackbar">
+      <HintPath>..\..\..\..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuSnackbar.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\mysql 4.0\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\..\PcWonderland.com_Guna_UI_Framework_Ultimate_2\Guna UI Framework Ultimate v2.0.0.1 Lib-Master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\mysql 4.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CrysRptBrgyOfficial.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrysRptBrgyOfficial.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrysRptClearance.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrysRptClearance.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrysRptIndigency.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrysRptIndigency.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrysRptResidency.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrysRptResidency.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="frmAddBlotterRecord.Designer.vb">
+      <DependentUpon>frmAddBlotterRecord.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddBlotterRecord.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddEmployee.Designer.vb">
+      <DependentUpon>frmAddEmployee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEmployee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddPurok.Designer.vb">
+      <DependentUpon>frmAddPurok.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddPurok.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBrgyInformation.Designer.vb">
+      <DependentUpon>frmBrgyInformation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBrgyInformation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddResident.Designer.vb">
+      <DependentUpon>frmAddResident.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddResident.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBrgyOfficial.Designer.vb">
+      <DependentUpon>frmBrgyOfficial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBrgyOfficial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBrgyOfficialPrint.Designer.vb">
+      <DependentUpon>frmBrgyOfficialPrint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBrgyOfficialPrint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCertificate.Designer.vb">
+      <DependentUpon>frmCertificate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCertificate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClearancePrint.Designer.vb">
+      <DependentUpon>frmClearancePrint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmClearancePrint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditBrgyOfficial.Designer.vb">
+      <DependentUpon>frmEditBrgyOfficial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditBrgyOfficial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployee.Designer.vb">
+      <DependentUpon>frmEmployee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmployee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIndigencyPrint.Designer.vb">
+      <DependentUpon>frmIndigencyPrint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmIndigencyPrint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIssueCertificate.Designer.vb">
+      <DependentUpon>frmIssueCertificate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmIssueCertificate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBlotter.Designer.vb">
+      <DependentUpon>frmBlotter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBlotter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPurokList.Designer.vb">
+      <DependentUpon>frmPurokList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPurokList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmResidencyPrint.Designer.vb">
+      <DependentUpon>frmResidencyPrint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmResidencyPrint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmResident.Designer.vb">
+      <DependentUpon>frmResident.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmResident.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmResidentBrowse.Designer.vb">
+      <DependentUpon>frmResidentBrowse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmResidentBrowse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrysRptResident.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrysRptResident.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="frmResidentPrint.Designer.vb">
+      <DependentUpon>frmResidentPrint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmResidentPrint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUser.Designer.vb">
+      <DependentUpon>frmUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewBlotterRecord.Designer.vb">
+      <DependentUpon>frmViewBlotterRecord.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewBlotterRecord.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewResident.Designer.vb">
+      <DependentUpon>frmViewResident.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewResident.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modeGlobalProcedures.vb" />
+    <Compile Include="modeGlobalVariables.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Resources\frmModal.Designer.vb">
+      <DependentUpon>frmModal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\frmModal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tabs.Designer.vb">
+      <DependentUpon>tabs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="tabs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CrysRptBrgyOfficial.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrysRptBrgyOfficial.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrysRptClearance.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrysRptClearance.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrysRptIndigency.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrysRptIndigency.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrysRptResidency.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrysRptResidency.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddBlotterRecord.resx">
+      <DependentUpon>frmAddBlotterRecord.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddEmployee.resx">
+      <DependentUpon>frmAddEmployee.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddPurok.resx">
+      <DependentUpon>frmAddPurok.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBrgyInformation.resx">
+      <DependentUpon>frmBrgyInformation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddResident.resx">
+      <DependentUpon>frmAddResident.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBrgyOfficial.resx">
+      <DependentUpon>frmBrgyOfficial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBrgyOfficialPrint.resx">
+      <DependentUpon>frmBrgyOfficialPrint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCertificate.resx">
+      <DependentUpon>frmCertificate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClearancePrint.resx">
+      <DependentUpon>frmClearancePrint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditBrgyOfficial.resx">
+      <DependentUpon>frmEditBrgyOfficial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmployee.resx">
+      <DependentUpon>frmEmployee.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIndigencyPrint.resx">
+      <DependentUpon>frmIndigencyPrint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIssueCertificate.resx">
+      <DependentUpon>frmIssueCertificate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBlotter.resx">
+      <DependentUpon>frmBlotter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPurokList.resx">
+      <DependentUpon>frmPurokList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmResidencyPrint.resx">
+      <DependentUpon>frmResidencyPrint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmResident.resx">
+      <DependentUpon>frmResident.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmResidentBrowse.resx">
+      <DependentUpon>frmResidentBrowse.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrysRptResident.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrysRptResident.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmResidentPrint.resx">
+      <DependentUpon>frmResidentPrint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUser.resx">
+      <DependentUpon>frmUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewBlotterRecord.resx">
+      <DependentUpon>frmViewBlotterRecord.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewResident.resx">
+      <DependentUpon>frmViewResident.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\frmModal.resx">
+      <DependentUpon>frmModal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tabs.resx">
+      <DependentUpon>tabs.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat_bubble_150px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat_bubble_150px.png1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chevron_right_150px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dollar_account_150px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dollar_account_150px.png1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_post_150px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_post_150px.png1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification_150px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification_150px.png1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pixlr-bg-result %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pixlr-bg-result %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pixlr-bg-result.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pixlr-bg-result1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\product_150px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\product_150px.png1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ratings_150px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ratings_150px.png1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\schedule_150px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\schedule_150px.png1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot_809.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot_810.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot_811.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot_812.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot_813.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot_8091.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot_8101.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_more_150px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_more_150px.png1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_150px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_150px.png1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\statistics_150px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\statistics_150px.png1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SANISIDRO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-photo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\default profile image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view.png" />
+    <None Include="Resources\account-36.png" />
+    <None Include="Resources\account-36-light.png" />
+    <None Include="Resources\account-plus-24.png" />
+    <None Include="Resources\account-plus-36.png" />
+    <None Include="Resources\circle-edit-outline-36.png" />
+    <None Include="Resources\delete--36.png" />
+    <None Include="Resources\eye-36.png" />
+    <None Include="Resources\shield-account-48.png" />
+    <None Include="Resources\shield-account-48-light.png" />
+    <None Include="Resources\view-dashboard-48.png" />
+    <None Include="Resources\view-dashboard-48-light.png" />
+    <None Include="Resources\arrow-right-bold-64.png" />
+    <None Include="Resources\arrow-right-bold-64-light.png" />
+    <None Include="Resources\card-search-48.png" />
+    <None Include="Resources\card-search-48-light.png" />
+    <None Include="Resources\magnify-48.png" />
+    <None Include="Resources\magnify-48-light.png" />
+    <None Include="Resources\blotter.png" />
+    <None Include="Resources\blotter-48.png" />
+    <None Include="Resources\blotter-48-light.png" />
+    <None Include="Resources\view-48.png" />
+    <None Include="Resources\edit-48.png" />
+    <None Include="Resources\delete-48.png" />
+    <None Include="Resources\arrow-right-bold-48.png" />
+    <None Include="Resources\arrow-right2-48-light.png" />
+    <None Include="Resources\resident.png" />
+    <None Include="Resources\blotter1.png" />
+    <None Include="Resources\arrow-right-bold-48-light.png" />
+    <None Include="Resources\logout-48.png" />
+    <None Include="Resources\logout-48-light.png" />
+    <None Include="Resources\account-48.png" />
+    <None Include="Resources\account-48-light.png" />
+    <None Include="Resources\certificate-48.png" />
+    <None Include="Resources\certificate-48-light.png" />
+    <None Include="Resources\add-image-100-dark.png" />
+    <None Include="Resources\information-outline-48.png" />
+    <None Include="Resources\information-outline-48-light.png" />
+    <None Include="Resources\Clearance-removebg-preview.png" />
+    <None Include="Resources\Clearance.png" />
+    <None Include="Resources\Clearance-removebg-preview1.png" />
+    <None Include="Resources\Clearance-removebg-preview2.png" />
+    <None Include="Resources\Indigency-removebg-preview.png" />
+    <None Include="Resources\Residency-removebg-preview.png" />
+    <None Include="Resources\information-variant.png" />
+    <None Include="Resources\print.png" />
+    <None Include="Resources\print1.png" />
+    <None Include="Resources\print2.png" />
+    <None Include="Resources\print3.png" />
+    <None Include="Resources\account-box.png" />
+    <None Include="Resources\brgy.png" />
+    <None Include="Resources\brgy1.jpg" />
+    <None Include="Resources\brg.png" />
+    <None Include="Resources\lock.png" />
+    <None Include="Resources\userName.png" />
+    <None Include="Resources\totalResident.png" />
+    <None Include="Resources\totalResident1.png" />
+    <None Include="Resources\shield-account.png" />
+    <None Include="Resources\creativity thrives here..png" />
+    <None Include="Resources\creativity thrives here1..png" />
+    <None Include="Resources\account-edit.png" />
+    <None Include="Resources\My project.png" />
+    <Content Include="To-Do.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
